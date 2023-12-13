@@ -1,0 +1,40 @@
+:root {
+    --main-text-color: white;
+    --main-header-color: black;
+    --secondary-font: 'K2D', sans-serif;
+    --primary-font: 'Lexend', sans-serif;
+    --header-font: 'Lexend Tera', sans-serif;
+    --main-font: 'Jost', 'sans-serif';
+
+    --image-url : {{url_for('static', filename='main-header.png')}}
+}
+
+body {
+    background-color: #2B2828;
+    color: var(--main-text-color);
+    font-family: var(--main-font);
+}
+
+#main-header {
+    display: flex;
+
+    width: 1305px;
+    height: 543px;
+
+    flex-shrink: 0;
+
+    border: 2px solid red; 
+    border-radius: 30px;
+
+    background: url("var(--image-url)"), lightgray 0px -306.048px / 100% 180.128% no-repeat;
+    
+
+
+}
+
+#main-header #header-text {
+    font-family: var(--main-header-font);
+    color: var(--main-header-color);
+}
+
+  
