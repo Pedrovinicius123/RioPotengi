@@ -19,8 +19,54 @@
             Um grito de desespero
             visando acordar as pessoas segas pelo sistema hipócrita e mentiroso.
         </h2>
+        <div id="designers-programers-searchers">
+            {% for line in integrants %}
+                {% if line != integrants[-1] %}
+                    <h3> {{line}} </h3>
+                    <svg width="12" height="12" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="5.5" cy="5.5" r="5.5" transform="matrix(-1 0 0 1 11.7143 0)" fill="#D9D9D9"/>
+                    </svg>
+
+                {% elif line == integrants[-1] %}
+            
+                    <h3> {{line}} </h3>
+
+                {% endif %}
+            {% endfor %}                    
+        </div>
     </div>    
     <div class="separator-line"></div>
+    <div id="login-logon-container">
+        <button>
+            <a href="{{url_for('loginpage')}}">Login</a>
+        </button>
+        <button>
+            <a href="/templates/logon.html">Sing in</a>
+        </button>    
+    </div>
+    <div id="text1-container">
+        <div class="content-cotainer">
+            <h1 class="subtitle-text"> Olá mundo! </h1>
+            <h3>
+                Só temos 0,5% de toda a água do mundo para consumir.
+                Segundo relatório da ONU, a extração desse recurso aumentou
+                6 vezes nesse século e continua a se agravar em 1% ao ano.
+                (O Rio Potengi também está incluso)
+            </h3>
+        </div>
+        <div class="content-container">
+            <svg width="632" height="558" viewBox="0 0 632 558" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M122.444 223.329C105.991 207.615 51.3952 216.594 11.0095 275.706C-1.7045 337.811 -12.474 474.293 46.16 523.378C119.453 584.735 148.62 548.071 228.644 523.378C308.667 498.686 374.481 421.616 483.672 479.232C592.863 536.847 698.314 457.532 755.901 462.022C813.489 466.511 852.378 417.875 820.967 358.762C789.556 299.65 870.328 311.622 883.79 275.706C897.251 239.79 863.597 195.643 870.328 153.741C877.059 111.839 892.016 90.8876 829.942 72.9294C767.868 54.9712 784.321 43.7475 730.473 38.5098C676.626 33.2721 686.348 3.34183 597.35 1.09706C508.352 -1.1477 547.99 36.265 498.63 38.5098C449.269 40.7546 419.354 25.0412 419.354 51.9784C419.354 73.5281 347.557 80.9108 311.659 81.9085C284.984 81.4097 229.092 82.5071 218.921 90.8876C206.207 101.363 203.216 94.6288 199.476 109.594C195.737 124.559 165.821 114.832 178.535 162.72C191.249 210.608 138.898 239.042 122.444 223.329Z" fill="url(#pattern0)" stroke="black"/>
+                <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_7_8" transform="matrix(0.000976562 0 0 0.00155618 0 -0.0975719)"/>
+                    </pattern>
+                    <image id="image-1" width="1024" height="768" href="{{url_for('static', filename='')}}"></image> 
+                </defs>
+            </svg>
+        </div>
+    </div>
+
     <div class="separator-line"></div>
 
 {% endblock %}
