@@ -171,4 +171,14 @@ body {
     line-height: normal;
 
 }
+
+#text1-container {
+    display:flex;
+}
+
+#text1-container .content-container .subtitle-text{
+    font-family: var(--main-font);
+    font-size: 96px;
+
+}
   
