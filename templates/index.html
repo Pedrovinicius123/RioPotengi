@@ -5,6 +5,9 @@
 {% endblock %}
 
 {% block content %}
+    <div class="">
+
+    </div>
     <header id="main-header">
         <div id="header-text">
             <h1> Salvem o Rio Potengi!</h1>
@@ -21,7 +24,7 @@
         </h2>
         <div id="designers-programers-searchers">
             {% for line in integrants %}
-                {% if line != integrants[-1] %}
+                {% if line != integrants[-1] and line != integrants[0] %}
                     <h3> {{line}} </h3>
                     <img src="{{url_for('static', filename='dot.svg')}}" alt="">
                     
@@ -56,7 +59,7 @@
                 (O Rio Potengi também está incluso)
             </h3>
         </div>
-        <div class="content-container">
+        <div class="content-container"  id="rio-potengi">
             <img src="{{url_for('static', filename='RioPotengi.png')}}" alt="Foto do Rio Potengi">
         </div>
     </section>

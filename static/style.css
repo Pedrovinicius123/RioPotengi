@@ -15,7 +15,9 @@ body {
     background-color: #2B2828;
     color: var(--main-text-color);
     font-family: var(--header-font);
-    overflow-x: hidden
+    overflow-x: hidden;
+
+    ;
 }
 
 a {
@@ -27,8 +29,7 @@ a {
 
     flex-shrink: 0;
     width:72.5%;
-    
-    border: 2px solid red;
+
 
     padding: 8.5%;
     margin: auto;
@@ -56,7 +57,7 @@ a {
 
     border-radius: 1.9375rem;
     background: rgba(255, 255, 255, 0.46);
-    backdrop-filter: blur(3.5px);
+    backdrop-filter: blur(10px);
 
     justify-content: center;
     align-items: center;
@@ -192,7 +193,7 @@ a {
 
 .text-container {
     margin-top: 250px;
-    display:flex;
+    display:flex
 }
 
 .content-container {
@@ -201,8 +202,16 @@ a {
 
     align-items: left;
     justify-content: center;
-    
 
+    width: 100%;    
+
+}
+
+#rio-potengi{
+    width: 60%;
+    padding-left:28%; 
+    padding-right: none;
+    margin-right: none;
 }
 
 .text-container .content-container .subtitle-text{
@@ -223,7 +232,7 @@ a {
     font-weight: 400;
     line-height: normal;
 
-    width: 30rem;
+    width: 80%;
     margin-right: 20rem;
     margin-left: 5rem;
 
@@ -335,13 +344,13 @@ a {
 
     border-radius: 10px;
 
-    transition: all 0.2s;
+    transition: height 0.2s;
 
 }
 
 #footer a img:hover{
     width:auto;
-    height: 4rem;
+    height: 5rem;
 
     padding: 10px;
 
@@ -378,7 +387,7 @@ a {
 
     color: black;
     text-decoration:none;
-    font-size: 10%;
+    font-size: 130%;
 }
 
 
@@ -386,9 +395,13 @@ a {
     width:2px;
     height: 100%;
     background-color: black;
+
+    
 }
 
-@media screen and (max-width: 550px){
+
+
+@media screen and (max-width: 650px){
     html, body {
         overflow-x: hidden;
     }
@@ -397,7 +410,7 @@ a {
         background-color: #2B2828;
         color: var(--main-text-color);
         font-family: var(--header-font);
-        overflow-x: hidden
+
     }
 
     a {
@@ -410,7 +423,6 @@ a {
         flex-shrink: 0;
         width:72.5%;
         
-        border: 2px solid red;
     
         padding: 9.5%;
         padding-top: 12%;
@@ -440,8 +452,8 @@ a {
         flex-shrink: 0;
     
         border-radius: 1rem;
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(3.5px);
+        background: rgba(255, 255, 255, 0.48);
+        backdrop-filter: blur(10px);
     
         justify-content: center;
         align-items: center;
@@ -509,6 +521,8 @@ a {
 
         justify-content:center;
         align-items: center;
+    
+        overflow-x:auto;
 
     }
 
@@ -538,10 +552,15 @@ a {
 
         margin-bottom: 250px;
 
+        overflow-x: auto;
+        padding-bottom: 20px;
+
     }
 
+
+
     #login-logon-container button {
-        margin-top: -7rem;
+        margin-top: auto;
         width: 8rem;
         height: 3rem;
         flex-shrink: 0;
@@ -574,8 +593,11 @@ a {
     }
 
     .text-container {
-        margin-top: 250px;
-        display:flex;
+        margin-top: 10px;
+        display:inline-block;
+
+        box-sizing: border-box;
+
     }
 
     .content-container {
@@ -584,15 +606,16 @@ a {
 
         align-items: left;
         justify-content: center;
-        
+
+                
 
     }
 
     .text-container .content-container .subtitle-text{
         font-family: var(--main-font);
-        font-size: 80px;
+        font-size: 200%; 
+        
 
-        margin-left: 5rem; 
 
     }
 
@@ -606,9 +629,8 @@ a {
         font-weight: 400;
         line-height: normal;
 
-        width: 30rem;
+        width: 20rem;
         margin-right: 20rem;
-        margin-left: 5rem;
 
     }
 
