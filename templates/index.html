@@ -5,19 +5,19 @@
 {% endblock %}
 
 {% block content %}
-    <div id="main-header">
+    <header id="main-header">
         <div id="header-text">
             <h1> Salvem o Rio Potengi!</h1>
         </div>
-    </div>
+    </header>
     <div class="separator-line"></div>
-    <div id="apresentation-container">
+    <section id="apresentation-container">
         <h2 id="apresentation-text">
             Este site é uma dedicatória
             à todos os que se preocupam com o nosso lar, a Terra.
             E também um alerta aos covardes que estão por trás das grandes estatais e empresas.
             Um grito de desespero
-            visando acordar as pessoas segas pelo sistema hipócrita e mentiroso.
+            visando acordar as pessoas cegas pelo sistema hipócrita e mentiroso.
         </h2>
         <div id="designers-programers-searchers">
             {% for line in integrants %}
@@ -34,22 +34,26 @@
                 {% endif %}
             {% endfor %}                    
         </div>
-    </div>    
+    </section>    
     <div class="separator-line"></div>
-    <div id="login-logon-container">
+    <section id="login-logon-container">
         <button>
             <a href="{{url_for('loginpage')}}">Login</a>
         </button>
         <button>
             <a href="/templates/logon.html">Sing in</a>
+        </button>
+        <button>
+            <a href="{{url_for('about')}}">About us</a>
         </button>    
-    </div>
-    <div id="text1-container">
+    </section>
+    <section class="text-container">
         <div class="content-container">
-            <h1 class="subtitle-text"> Olá mundo! </h1>
+            <h1 class="subtitle-text"> Salve-o agora... </h1>
             <h3>
                 Só temos 0,5% de toda a água do mundo para consumir.
-                Segundo relatório da ONU, a extração desse recurso aumentou
+                Segundo <a href="https://brasil.un.org/pt-br/123077-ag%C3%AAncias-da-onu-lan%C3%A7am-relat%C3%B3rio-mundial-sobre-o-desenvolvimento-dos-recursos-h%C3%ADdricos" target="__blank">
+                relatório da ONU</a>, a extração desse recurso aumentou
                 6 vezes nesse século e continua a se agravar em 1% ao ano.
                 (O Rio Potengi também está incluso)
             </h3>
@@ -57,8 +61,52 @@
         <div class="content-container">
             <img src="{{url_for('static', filename='RioPotengi.png')}}" alt="Foto do Rio Potengi">
         </div>
-    </div>
-
-    <div class="separator-line"></div>
+    </section>
+    <section class="text-container">
+        <div class="content-container">
+            <img id="apocalipse" src="{{url_for('static', filename='Apocalipse.png')}}" alt="Foto do Rio Potengi">
+        </div>
+        <div id="text-container-last">
+            <h1 class="subtitle-text"> ...ou perca-o para sempre </h1>
+            <h3>
+                Se continuarmos nesse ritmo,
+                a água potável vai ser mais cara
+                que o atual petróleo. <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi33OCi8I-DAxVZq5UCHQ2UCXoQFnoECAoQAw&url=https%3A%2F%2Fexame.com%2Fmundo%2Fagua-ja-tao-valiosa-quanto-petroleo-515371%2F&usg=AOvVaw1e9ODJH7sTbBW_mp3DzD4H&opi=89978449"> E já estamos caminhando para isso.</a>
+                Resumindo, todos morrem no final.
+                Cabe a você prevenir que isso ocorra...
+            </h3>
+        </div>        
+    </section>
+    <section id="bertolt-brecht-quote">
+        <h1 id="aspas">"</h1>
+        <h3>
+            Primeiro levaram os negros<br>
+            Mas não me importei com isso<br>
+            Eu não era negro<br>
+            Em seguida levaram alguns operários<br>
+            Mas não me importei com isso<br>
+            Eu também não era operário<br>
+            Depois prenderam os miseráveis<br>
+            Mas não me importei com isso<br>
+            Porque eu não sou miserável<br>
+            Depois agarraram uns desempregados<br>
+            Mas como tenho meu emprego<br>
+            Também não me importei<br>
+            Agora estão me levando<br>
+            Mas já é tarde.<br>
+            Como eu não me importei com ninguém <br>
+            Ninguém se importa comigo.”
+        </h3>
+        <div id="actual-brecht">
+            <img src="{{url_for('static', filename='brecht.png')}}" alt="Foto de Bertolt Brecht">
+            <h2>Bertolt Brecht</h2>
+        </div>            
+    </section>
+    <div id="final-separator-line"></div>
+    <footer id="footer">
+        <a href="https://portal.ifrn.edu.br/campus/natalzonanorte/">
+            <img src="{{url_for('static', filename='ifrn.png')}}" alt="Link para o site oficial IFRN " >
+        </a>
+    </footer>
 
 {% endblock %}
