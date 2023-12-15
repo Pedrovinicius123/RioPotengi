@@ -23,10 +23,8 @@
             {% for line in integrants %}
                 {% if line != integrants[-1] %}
                     <h3> {{line}} </h3>
-                    <svg width="12" height="12" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="5.5" cy="5.5" r="5.5" transform="matrix(-1 0 0 1 11.7143 0)" fill="#D9D9D9"/>
-                    </svg>
-
+                    <img src="{{url_for('static', filename='dot.svg')}}" alt="">
+                    
                 {% elif line == integrants[-1] %}
             
                     <h3> {{line}} </h3>
@@ -107,6 +105,15 @@
         <a href="https://portal.ifrn.edu.br/campus/natalzonanorte/">
             <img src="{{url_for('static', filename='ifrn.png')}}" alt="Link para o site oficial IFRN " >
         </a>
+        <div class="icon-links">
+            <a href="https://github.com/Pedrovinicius123/RioPotengi">
+                <img src="{{url_for('static', filename='github.svg')}}" alt="Link para github do site">
+            </a>
+            <div class="separator-line-vertical"></div>
+            <a href="{{url_for('about')}}">
+                About us
+            </a>
+        </div>        
     </footer>
 
 {% endblock %}
