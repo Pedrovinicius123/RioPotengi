@@ -21,18 +21,7 @@
                 Um grito de desespero
                 visando acordar as pessoas cegas pelo sistema hipócrita e mentiroso.
             </h2>
-            <div id="designers-programers-searchers">
-                {% for line in integrants %}
-                    {% if line != integrants[-1] and line != integrants[0] %}
-                        <h3> {{line}} </h3>
-                        <img src="{{url_for('static', filename='dot.svg')}}" alt="">
-                        
-                    {% elif line == integrants[-1] %}
-                
-                        <h3> {{line}} </h3>
-    
-                    {% endif %}
-                {% endfor %}                    
+            <div id="designers-programers-searchers"></div>                 
             </div>
         </section>    
         <div class="separator-line"></div>

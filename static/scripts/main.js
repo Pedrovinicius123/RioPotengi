@@ -1,10 +1,14 @@
-function toggleDeviceSize() {
-    
-    const body = document.body;
-    let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+function developersApresentation() {
 
-    if (width > 600) {
-        
+    const integrants = {
+        names : ['Pedro Vinícius', 'Ana Clara', 'Enzo Lucattony', 'Ana Luiza', 'Diego', 'Sarah Beatriz', 'Angela', 'Jamilly'],
+        nums: names.lenght
+    };
+    
+    let element = document.getElementById('designers-programers-searchers');
+
+    for (i in integrants.names){
+        console.log(i)
     }
 
 }

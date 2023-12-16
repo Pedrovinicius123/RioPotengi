@@ -115,13 +115,15 @@ a {
 
     line-height: normal;
 
+    border: 2px solid red;
+
 }
 
 #apresentation-container #designers-programers-searchers{
     display: flex;
     flex-direction: row;   
 
-    width: 100%;
+    width: 150%;
 
     padding-top: 20%;
 
@@ -129,6 +131,9 @@ a {
 
     justify-content:center;
     align-items: center;
+
+
+    padding-bottom: 25px;
 
     overflow-y: hidden;
     overflow-x: auto;
