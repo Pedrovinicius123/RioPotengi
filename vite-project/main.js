@@ -11,7 +11,6 @@ function displayDevs(){
     ]
   }
 
-  let element = document.getElementById('designers-programers-searchers')
   let HTMLCode = document.createElement('div');
   let HTMLstring = [];
 
@@ -35,8 +34,9 @@ function displayDevs(){
     }        
   }
 
+
+
   let code = HTMLstring.join();
-  element.innerHTML = code;
   
 }
 
