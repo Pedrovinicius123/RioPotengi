@@ -7,11 +7,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost&family=K2D&family=Lexend+Tera:wght@600&family=Lexend:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/scripts/main.js">
+    
     <title>Salvem o Rio Potengi</title>
 </head>
-<body>
+<body>   
     <div class="">
+        <script type="text/javascript" href="/main.js"></script>
         <header id="main-header">
             <div id="header-text">
                 <h1> Salvem o Rio Potengi!</h1>
@@ -20,11 +21,15 @@
         <div class="separator-line"></div>
         <section id="apresentation-container">
             <h2 id="apresentation-text">
-                Este site é uma dedicatória
-                à todos os que se preocupam com o nosso lar, a Terra.
-                E também um alerta aos covardes que estão por trás das grandes estatais e empresas.
-                Um grito de desespero
-                visando acordar as pessoas cegas pelo sistema hipócrita e mentiroso.
+                Somos discentes do Curso técnico de Informática para Internet
+                do IFRN, polo Zona Norte de Natal. Integramos um grupo de codinome Geo-Lufa,
+                imbuído da tarefa de produzir, de forma interdisciplinar (Geografia, Fundamentos de Lógica e Algoritmo, Português
+                e Química) uma campanha educativa sobre o uso e consequências dos recursos
+                da natureza, mais especificamente sobre o tema: Água: poluição e contaminação do estuário do Rio Potengi.
+            </h2>
+            <h2 id="apresentation-text">
+                Neste intuito, criamos este site, visando alertar para os problemas enfrentados por este, que é o principal
+                curso de água do estado do Rio Grande do Norte - o Rio Potengi - na expectativa de contribuir com a sua preservação.
             </h2>
             <div id="designers-programers-searchers"></div>                 
             </div>
@@ -35,10 +40,10 @@
                 <a href="">Login</a>
             </button>
             <button>
-                <a href="/templates/logon.html">Sing in</a>
+                <a href="/templates/logon.html" target="__blank">Sing in</a>
             </button>
             <button>
-                <a href="/templates/about.html">About us</a>
+                <a href="/templates/about.html" target="__blank">About us</a>
             </button>    
         </section>
         <div class="alt-container">
@@ -54,12 +59,12 @@
                     </h3>
                 </div>
                 <div class="content-container"  id="rio-potengi">
-                    <img src="assets/RioPotengi.png" alt="Foto do Rio Potengi">
+                    <img src="/assets/RioPotengi.png" alt="Foto do Rio Potengi">
                 </div>
             </section>
             <section class="text-container">
                 <div class="content-container">
-                    <img id="apocalipse" src="{{url_for('static', filename='Apocalipse.png')}}" alt="Foto do Rio Potengi">
+                    <img id="apocalipse" src="/assets/Apocalipse.png" alt="Foto do Rio Potengi">
                 </div>
                 <div id="text-container-last">
                     <h1 class="subtitle-text"> ...ou perca-o para sempre </h1>
@@ -94,21 +99,21 @@
                 Ninguém se importa comigo.”
             </h3>
             <div id="actual-brecht">
-                <img src="{{url_for('static', filename='brecht.png')}}" alt="Foto de Bertolt Brecht">
+                <img src="/assets/brecht.png" alt="Foto de Bertolt Brecht">
                 <h2>Bertolt Brecht</h2>
             </div>            
         </section>
         <div id="final-separator-line"></div>
         <footer id="footer">
-            <a href="https://portal.ifrn.edu.br/campus/natalzonanorte/">
-                <img src="{{url_for('static', filename='ifrn.png')}}" alt="Link para o site oficial IFRN " >
+            <a href="https://portal.ifrn.edu.br/campus/natalzonanorte/" target="__blank">
+                <img src="/assets/ifrn.png" alt="Link para o site oficial IFRN " >
             </a>
             <div class="icon-links">
-                <a href="https://github.com/Pedrovinicius123/RioPotengi">
-                    <img src="{{url_for('static', filename='github.svg')}}" alt="Link para github do site">
+                <a href="https://github.com/Pedrovinicius123/RioPotengi" target="__blank">
+                    <img src="/assets/github.svg" alt="Link para github do site">
                 </a>
                 <div class="separator-line-vertical"></div>
-                <a href="{{url_for('about')}}">
+                <a href="/templates/about.html" target="__blank">
                     About us
                 </a>
             </div>        

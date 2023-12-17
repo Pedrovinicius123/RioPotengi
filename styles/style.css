@@ -35,7 +35,7 @@ a {
     margin: auto;
     margin-top: 10%;
     
-    background-image: url('main-header.png');
+    background-image: url('/assets/main-header.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     
@@ -87,36 +87,39 @@ a {
 
 #apresentation-container{
     display:flex;
+    flex-direction: column;
 
     width:auto;
-    height:20rem;
+    height: 20rem;
 
     justify-content:center;
     align-items:center;
 
-    flex-direction: column
-
+    padding-bottom:0; 
+    
 
 }
 
 #apresentation-text {
 
-    flex-direction:column;
+    position:relative;
+
 
     font-family: var(--primary-font);
     text-align: justify;
 
     width: 80%;  
-    height: 15rem;
+    height: auto;
 
-    font-size: 1.7rem;
+    font-size: 130%;
     font-style: normal;
     font-weight: 600;
-
+    
     line-height: normal;
 
-    border: 2px solid red;
+    margin-bottom: 1px;
 
+    margin-top: 5rem;
 }
 
 #apresentation-container #designers-programers-searchers{
@@ -125,7 +128,7 @@ a {
 
     width: 150%;
 
-    padding-top: 20%;
+    padding-top: 10%;
 
     color: #FFF;
 
@@ -213,6 +216,11 @@ a {
 
     align-items: left;
     justify-content: center;
+    
+    align-items:left;
+
+    height: auto;
+    width: 200%;
 
             
 
@@ -226,13 +234,21 @@ a {
 
 }
 
+#apocalipse {
+
+    width: 40%;
+}
+
 #rio-potengi{
 
     position: relative;
 
-    padding-left: 20%;
+    padding-left: 50%;
     padding-bottom: 0;
-    margin-bottom:0;   
+    margin-bottom:0;
+    
+    height: auto;
+    width: 70%;
     
     top: 100px;
 }
@@ -351,6 +367,7 @@ a {
 
 }
 
+
 #footer a img{
     width: auto;
     height: 3rem;
@@ -358,7 +375,7 @@ a {
 
     border-radius: 10px;
 
-    transition: height 0.2s;
+    transition: all 0.2s;
 
 }
 
@@ -445,7 +462,7 @@ a {
         margin: auto;
         margin-top: 10%;
         
-        background-image: url('main-header.png');
+        background-image: url('/assets/main-header.png');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         
@@ -509,18 +526,16 @@ a {
     }
 
     #apresentation-text {
+        position: relative;
 
-        flex-direction:column;
-
-        font-family: var(--primary-font);
-        text-align: justify;
+        top: 70px;
 
         width: 80%;  
         height: 15rem;
 
         font-size: 1rem;
-        font-style: normal;
-        font-weight: 600;
+
+        margin-top: 5%;
 
         line-height: normal;
 
@@ -579,35 +594,6 @@ a {
 
     #login-logon-container button {
         margin-top: 0;
-        width: 8rem;
-        height: 3rem;
-        flex-shrink: 0;
-
-        border-radius: 0.25rem;
-
-        transition: all 0.2s;
-    }
-
-    #login-logon-container button a{
-        text-decoration: none;
-        color: black;
-        
-        font-family: var(--main-font);
-        font-size: 1.5rem;
-        font-style: normal;
-        
-        font-weight: 400;
-        line-height: normal;
-
-
-    }
-
-    #login-logon-container button:hover{
-        width: 11.3125rem;
-        height: 5.125rem;
-        flex-shrink: 0;
-        background-color:white;
-        border-radius: 0.25rem;
     }
 
     .text-container {
@@ -632,16 +618,21 @@ a {
         
         align-items:left;
 
+        width: 300%;
+
     }
 
     .content-container #apocalipse {
 
-        width:auto;
-        height: 30rem;
+        position: relative;
+
+        width:40%;
+        height: auto;
 
         position: relative;
 
-        left: -20rem;
+        left: -10rem;
+        top: 10rem
 
 
     
@@ -656,8 +647,10 @@ a {
     }
 
     #rio-potengi{
-        padding-left: 10%;
-        position: static;
+        padding-left: 40%;
+        
+        width: 30rem;
+        height: 20rem;
 
         
     }
@@ -679,16 +672,37 @@ a {
 
     .text-container #text-container-last{
 
-        margin-left: 10rem;
-        width:auto;
+        display:flex;
+        flex-direction: column;
 
+        align-items: center;
+        align-self: first baseline;
+
+        position: relative;
+
+        top: 200px;
+        
+        right: 17%;
+
+        width:auto;
+        height: 100%;
+
+        padding: 10rem;
+        margin-left: 0;
+        
     }
 
     .text-container #text-container-last .subtitle-text{
+
+        position:relative;
         color: #FFF;
         font-family: var(--main-font);
+        
+        width: 140%;
 
-        font-size: 6rem;
+        right: -13%;
+
+        font-size: 3rem;
         font-style: normal;
 
         font-weight: 400;
@@ -702,16 +716,20 @@ a {
     }
 
     #bertolt-brecht-quote{
+        
         display:flex;
         align-items:first baseline;
 
-        margin-left:10rem;
+        margin-left:10px;
     }
 
     #bertolt-brecht-quote #aspas{
+        position: relative;
+        top: -210px;
+    
         color: #FFF;
         font-family: var(--secondary-font);
-        font-size: 12.5rem;
+        font-size: 6rem;
         font-style: normal;
         font-weight: 400;
         line-height: 176.29%; /* 22.03625rem */    
@@ -722,10 +740,11 @@ a {
     #bertolt-brecht-quote h3{
         position:relative;
 
-        top: -100px;
-
-        width: 27rem;
-        height: 30rem;
+        top: -260px;
+        
+        font-size: 17px;
+        width: 20rem;
+        height: 18rem;
         flex-shrink: 0;
 
         font-family: var(--main-font);
@@ -738,6 +757,15 @@ a {
     #bertolt-brecht-quote #actual-brecht{
         display: flex;
         flex-direction: column;
+
+        position: relative;
+
+        top: 200px;
+        left: 5px;
+        
+        align-items:center;
+
+
     }
 
     #bertolt-brecht-quote #actual-brecht img{
@@ -752,87 +780,51 @@ a {
         border: 6px solid black;
     }
 
-    #bertolt-brecht-quote #actual-brecht{
-        position: relative;
+    #bertolt-brecht-quote #actual-brecht h2 {
+        position:relative;
 
-        top: 340px;
-        left: 100px;
-        
-        align-items:center;
+        right: 107.5%;
+        top: 30
     }
 
-    #footer {
-
-        display: inline-flex;
-
-        background-color: white;
-        margin-top: 100px;
-        padding: 20px;
-
-        width: 100%;
-        height: auto;
-
-        align-items:center;
-
-    }
-
-    #footer a img{
-        width: auto;
-        height: 3rem;
-        padding: 10px;
-
-        border-radius: 10px;
-
-        transition: all 0.2s;
-
-    }
-
-    #footer a img:hover{
-        width:auto;
-        height: 4rem;
-
-        padding: 10px;
-
-        border-radius: 10px;
-
-    }
 
     #footer .icon-links{
         display: flex;
 
+
+
+
         width : auto;
-        height: 2rem;
-
-        margin-left: auto;
-        margin-right: 10%;
-
-        padding-bottom: none;
-        padding-top: none;
+        height: 6rem;
 
         gap: 12px;
         align-items:center;
         
     }
+}
 
-    #footer .icon-links a{
-        font-size:100%;
-        color: black;
-        text-decoration:none;
-
-        transition: all 0.2s
+@media screen and (max-width:605px) {
+    #bertolt-brecht-quote{
+        flex-direction:column;
+        margin-top: 60px;
+        align-items:center;
     }
 
-    #footer .icon-links a:hover{
-
-        color: black;
-        text-decoration:none;
-        font-size: 10%;
+    #bertolt-brecht-quote #actual-brecht{
+        position:relative;
+        top: 0;
     }
 
+    #bertolt-brecht-quote #aspas {
+        top: -50px;
+        right: 150px;
+    }
+    #bertolt-brecht-quote h3{
+        right: -10%;
+    }
 
-    .icon-links .separator-line-vertical{
-        width:2px;
-        height: 100%;
-        background-color: black;
+    #bertolt-brecht-quote #actual-brecht h2{
+        
+        left:1%;
     }
-    }
+}
