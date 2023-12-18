@@ -393,7 +393,7 @@ a {
     display: flex;
 
     width : auto;
-    height: 2rem;
+    height: 1rem;
 
     margin-left: auto;
     margin-right: 10%;
@@ -420,7 +420,6 @@ a {
     text-decoration:none;
     font-size: 130%;
 }
-
 
 .icon-links .separator-line-vertical{
     width:2px;
@@ -520,7 +519,9 @@ a {
         justify-content:center;
         align-items:center;
 
-        flex-direction: column
+        flex-direction: column;
+
+        margin-bottom: 100px;
 
 
     }
@@ -531,11 +532,12 @@ a {
         top: 70px;
 
         width: 80%;  
-        height: 15rem;
+        height: 40%;
 
-        font-size: 1rem;
+        font-size: 70%;
 
-        margin-top: 5%;
+        margin-top: 1%;
+        margin-bottom: 10%;
 
         line-height: normal;
 
@@ -544,7 +546,7 @@ a {
     #apresentation-container #designers-programers-searchers{
         display: flex;  
 
-        width: 100%;
+        width: 20rem;
 
         color: #FFF;
 
@@ -610,6 +612,9 @@ a {
     }
 
     .content-container {
+
+        position: relative;
+
         display:flex;
         flex-direction:column;
 
@@ -618,7 +623,7 @@ a {
         
         align-items:left;
 
-        width: 300%;
+        width: 200%;
 
     }
 
@@ -698,7 +703,7 @@ a {
         color: #FFF;
         font-family: var(--main-font);
         
-        width: 140%;
+        width: 160%;
 
         right: -13%;
 
@@ -712,6 +717,7 @@ a {
     .text-container #text-container-last h3{
         font-family: var(--main-font);
         font-size: 1.5rem; 
+        width: 200%;
 
     }
 
@@ -788,18 +794,30 @@ a {
     }
 
 
+
     #footer .icon-links{
         display: flex;
 
-
-
-
         width : auto;
-        height: 6rem;
+        height: 3rem;
+        
 
         gap: 12px;
         align-items:center;
         
+    }
+
+
+    #footer a img{
+
+        width: auto;
+        height: 3rem;
+
+    }
+
+    #footer .icon-links a img{
+        width: auto;
+        height:2rem;
     }
 }
 
