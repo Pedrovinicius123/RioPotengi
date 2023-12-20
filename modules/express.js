@@ -1,4 +1,7 @@
+const fs = require('fs');
+
 const express = require("express");
+const path = require("path");
 
 const app = express();
 
@@ -20,6 +23,15 @@ app.get('/users', (req, res) => {
 
     res.status(200).json(JSON.jsonify(users))
 
+})
+
+app.get('/logon', (req, res) => {
+    res.contentType('application/html')
+    res.status(200).sendFile(path.join(__dirname, '/test', 'test.html'))
+})
+
+app.post('/logon', (req, res) => {
+    
 })
 
 const port = 8080;

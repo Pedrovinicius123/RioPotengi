@@ -3,19 +3,14 @@ const mongoose = require('mongoose');
 
 dotenv.config()
 
-const connectToDatabase = async () => {
-    await mongoose.connect(
-        `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@dicasparadevsnodejs.hxjftse.mongodb.net/?retryWrites=true&w=majority`,
+const uri = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@dicasparadevsnodejs.hxjftse.mongodb.net/?retryWrites=true&w=majority`
 
-        (error) => {
-            if (error){
-                return console.log('An error ocurred while trying to connect: ', error)
-            }
+connectToDatabase().catch(error => {
+    console.log(error);
+})
 
-        return console.log('Connection secured')
-
-        }    
-    )
+async function connectToDatabase(){
+    await mongoose.connect(uri);
 }
+module.exports = connectToDatabase;
 
-module.exports = connectToDatabase
