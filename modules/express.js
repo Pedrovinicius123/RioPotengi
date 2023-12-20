@@ -1,13 +1,13 @@
-const fs = require('fs');
-
 const express = require("express");
 const path = require("path");
+const userModel = require('../src/models/user_model')
 
 const app = express();
+const testPath = path.join(__dirname, 'test')
 
 app.get('/home', (req, res) => {
-    res.contentType('application/html')
-    res.status(200).send('<h1>Hello world!</h1>')
+    res.contentType('.html')
+    res.status(200).sendFile(`${testPath}/index.html`)
 })
 
 app.get('/users', (req, res) => {
@@ -26,12 +26,24 @@ app.get('/users', (req, res) => {
 })
 
 app.get('/logon', (req, res) => {
-    res.contentType('application/html')
-    res.status(200).sendFile(path.join(__dirname, '/test', 'test.html'))
+    res.contentType('.html');
+    res.status(200).sendFile(`${testPath}/logon.html`);
 })
 
-app.post('/logon', (req, res) => {
+app.post('/logon', async (req, res) => {
+    try {
+        const user = await userModel.create(req.body);
+        res.status(201).json(user)
+
+    } catch (error){
+        res.status(500).send(error.message)
     
+    }
+})
+
+app.get('/login', (req, res) => { 
+    res.contentType('.html');
+    res.status(200).sendFile(`${testPath}/loginpage.html`)
 })
 
 const port = 8080;
