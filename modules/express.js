@@ -3,25 +3,67 @@ const path = require("path");
 const userModel = require('../src/models/user_model')
 
 const app = express();
-const testPath = path.join(__dirname, 'test')
 
-app.get('/home', (req, res) => {
-    res.contentType('.html')
-    res.status(200).sendFile(`${testPath}/index.html`)
+app.use(express.json());
+app.use((req, res, next) => {
+    console.log(req.body);
+    next();
+
 })
 
-app.get('/users', (req, res) => {
-    const users = [{
-        name: 'John',
-        email: 'john@gmail.com'
-    },
-    {
-        name: 'Johana',
-        email: 'johana@gmail.com'
-    }
-    ]
+const testPath = path.join(__dirname, 'test');
 
-    res.status(200).json(JSON.jsonify(users))
+app.get('/users', async (req, res) => {
+    try {
+
+        const users = await userModel.find({});
+        res.status(200).json(users);
+
+    } catch (error) {
+
+        res.status(500).send(error.message)
+
+    }
+
+});
+
+app.get('/users/:id', async (req, res) => {
+    try {
+        const id = req.params.id        
+        const user = await userModel.findById(id);
+
+        return res.status(200).json(user)
+
+
+    } catch (error) {
+        return res.status(500).send(error.message)
+    
+    }
+})
+
+app.patch('/users/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        const user = await userModel.findByIdAndUpdate(id, req.body, {new : true});
+
+        return res.status(200).json(user);
+
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+})
+
+app.delete('/users/:id', async (req, res) =>{
+    try {
+        const id = req.params.id;
+        const user = await userModel.findByIdAndDelete(id);
+
+        return res.status(200).json(user)
+
+    } catch(error) {
+        return res.status(500).send(error.message)
+
+    }
 
 })
 
@@ -33,11 +75,10 @@ app.get('/logon', (req, res) => {
 app.post('/logon', async (req, res) => {
     try {
         const user = await userModel.create(req.body);
-        res.status(201).json(user)
+        res.status(201).json(user);
 
     } catch (error){
-        res.status(500).send(error.message)
-    
+        res.status(500).send(error.message);
     }
 })
 
@@ -50,4 +91,3 @@ const port = 8080;
 app.listen(port, () => {
     console.log(`Listening at port ${port}`);
 })
-
