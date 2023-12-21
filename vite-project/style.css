@@ -16,8 +16,6 @@ body {
     color: var(--main-text-color);
     font-family: var(--header-font);
     overflow-x: hidden;
-
-    ;
 }
 
 a {
@@ -527,17 +525,18 @@ a {
     }
 
     #apresentation-text {
+
         position: relative;
 
-        top: 70px;
+        top: 100px;
 
         width: 80%;  
         height: 40%;
 
-        font-size: 70%;
+        font-size: 60%;
 
         margin-top: 1%;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
 
         line-height: normal;
 
@@ -550,7 +549,7 @@ a {
 
         color: #FFF;
 
-        padding-top: 20%;
+        padding-top: 40%;
         padding-bottom: 10%;
 
         justify-content:center;
@@ -660,20 +659,7 @@ a {
         
     }
 
-    .text-container .content-container h3{
-        font-family: var(--main-font);
-        color: #FFF;
-
-        font-size: 1.5rem;
-        font-style: normal;
-        
-        font-weight: 400;
-        line-height: normal;
-
-        width: 30%;
-        margin-right: 20rem;
-
-    }
+    
 
     .text-container #text-container-last{
 
@@ -715,10 +701,12 @@ a {
     }
 
     .text-container #text-container-last h3{
-        font-family: var(--main-font);
-        font-size: 1.5rem; 
-        width: 200%;
+        position:relative;
 
+        margin-left : 30%;
+        font-family: var(--main-font);
+        font-size: 150%; 
+        width: 150%;
     }
 
     #bertolt-brecht-quote{
@@ -845,4 +833,186 @@ a {
         
         left:1%;
     }
+}
+
+@media screen and (max-width:300px) {
+
+    #apresentation-text {
+
+        position: relative;
+
+        top: 40px;
+
+        width: 80%;  
+        height: 40%;
+
+        font-size: 50%;
+
+        margin-top: 1%;
+        margin-bottom: 8%;
+
+        line-height: normal;
+
+    }
+
+    .text-container {
+        
+        position:relative;
+
+        left:0;
+
+        margin-top: 0;
+        display:inline-block;
+
+        box-sizing: border-box;
+
+    }
+
+    #rio-potengi{
+        padding-left: 0;
+        
+        width: 30rem;
+        height: 20rem;
+
+        
+    }
+
+    .text-container .content-container h3{
+        font-family: var(--main-font);
+        color: #FFF;
+
+        font-size: 80%;
+        font-style: normal;
+        
+        font-weight: 400;
+        line-height: normal;
+
+        width: 30%;
+        margin-right: 20rem;
+
+    }
+
+    .text-container #text-container-last h3{
+        font-family: var(--main-font);
+        font-size: 80%; 
+        width: 100%;
+        margin-left:-40%;
+
+    }
+
+    .text-container #text-container-last .subtitle-text{
+
+        right: 0px;
+        font-size: 300%;
+    }
+
+    #bertolt-brecht-quote {
+        margin-top:100%;
+    }
+
+    #bertolt-brecht-quote #aspas{
+        position: relative;
+        top: -100px;
+        
+        left: -50%;
+    
+        color: #FFF;
+        font-family: var(--secondary-font);
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 176.29%; /* 22.03625rem */    
+
+        
+    }
+
+    #bertolt-brecht-quote h3{
+        position:relative;
+
+        top: -150px;
+        left : 20%;
+        
+        font-size: 80%;
+        width: 20rem;
+        height: 18rem;
+        flex-shrink: 0;
+
+        font-family: var(--main-font);
+
+        font-style: normal;
+        font-weight: 400;
+        line-height: 176.29%; /* 2.64438rem */ 
+    }
+
+    #bertolt-brecht-quote #actual-brecht{
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+
+        top: 70px;
+        left: 5px;
+        
+        align-items:center;
+        justify-content:center;
+
+
+    }
+
+    #bertolt-brecht-quote #actual-brecht img{
+
+        position: relative;
+
+        width: auto;
+        height: 20rem;
+        flex-shrink: 0;
+
+        border-radius: 30px;
+        border: 6px solid black;
+    }
+
+    #bertolt-brecht-quote #actual-brecht h2 {
+        position:relative;
+
+        align-items:center;
+
+        width:100%;
+        font-size: 20px;
+
+        right: -300px;
+    }
+
+    #footer .icon-links{
+
+        width : auto;
+        height: 2rem;
+
+        align-items:center;
+        margin-left:0;
+        
+    }
+
+    #footer {
+        display:flex;
+        flex-direction:column;
+
+        align-items: first baseline;
+        width:100%;
+        
+    }
+
+
+    #footer a img{
+
+        width: auto;
+        height: 2rem;
+
+    }
+
+    #footer .icon-links a img{
+        width: auto;
+        height:1rem;
+    }
+    
+    
 }
